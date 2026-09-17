@@ -55,7 +55,7 @@ Reads historical and migrated member files from S3 and performs:
 - audit and data-quality fields
 - partitioned Parquet output
 
-### Job 2 — Claims & Policies Domain
+### Job 2 — Claims ### Job 2 — Claims & Policies Domain Supporting Domain Data
 
 Reads healthcare domain tables from Snowflake and performs:
 
@@ -183,7 +183,7 @@ Local validation uses Python syntax compilation to catch accidental syntax error
 5. Curated Member360 data is written to S3 and Snowflake.
 6. Airflow terminates the temporary EMR cluster.
 
-The DAG is configured for a daily **20:20 UTC** example schedule; deployment environments can change the schedule as needed.
+The DAG uses a repository-level example schedule; production scheduling is environment-specific.
 
 ## Technologies
 
