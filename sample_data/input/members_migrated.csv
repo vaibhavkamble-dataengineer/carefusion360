@@ -1,0 +1,4 @@
+legacy_member_id,member_id,ssn_raw,patient_first_name,patient_last_name,email,phone_number,address_line,city,zip_code,enrollment_date,policy_id,policy_type,member_segment,migration_flag,state
+L1001,M1001,111-22-3333,Asha,Patel,asha@example.com,555-0101,100 Demo St,Austin,78701,2025-01-01,P1001,PPO,Standard,Y,TX
+L1002,M1002,222-33-4444,Ben,Carter,ben@example.com,555-0102,200 Demo St,Boston,02108,2025-02-01,P1002,HMO,Family,Y,MA
+L1003,M1003,333-44-5555,Chloe,Singh,chloe@example.com,555-0103,300 Demo St,Denver,80202,2025-03-01,P1003,PPO,Premium,Y,CO

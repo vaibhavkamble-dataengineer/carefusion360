@@ -1,0 +1,4 @@
+member_id,member_key,age_band,state,tenure_days,lifetime_claim_amount,lifetime_revenue,total_claim_count,violation_count,streaming_claim_events,streaming_payment_events,policy_change_count,member_update_count,engagement_score,lifetime_value,risk_tier,churn_flag
+M1001,demo_hash_m1001,35-44,TX,180,2150.50,5000.00,2,2,1,1,0,0,0.6931,2849.50,MEDIUM,STABLE
+M1002,demo_hash_m1002,45-54,MA,150,4250.00,7000.00,1,0,0,0,1,0,0.0000,2750.00,LOW,HIGH_CHURN_RISK
+M1003,demo_hash_m1003,25-34,CO,120,2100.75,6200.00,1,1,0,0,0,1,0.0000,4099.25,MEDIUM,HIGH_CHURN_RISK

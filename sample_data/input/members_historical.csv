@@ -1,0 +1,4 @@
+legacy_member_id,effective_date,birth_year,gender,coverage_start_date,coverage_end_date,record_updated_ts
+L1001,2025-01-01,1989,F,2025-01-01,,2025-01-03 10:15:00
+L1002,2025-02-01,1978,M,2025-02-01,2025-12-31,2025-02-02 09:00:00
+L1003,2025-03-01,1995,F,2025-03-01,,2025-03-02 08:30:00

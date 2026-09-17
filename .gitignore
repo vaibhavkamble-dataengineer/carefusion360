@@ -98,3 +98,14 @@ htmlcov/
 *.tmp
 *.bak
 *.backup
+
+# ------------------------------------------------------------
+# Portfolio sample data
+# ------------------------------------------------------------
+!sample_data/
+!sample_data/README.md
+!sample_data/input/
+!sample_data/input/*.csv
+!sample_data/input/*.json
+!sample_data/output/
+!sample_data/output/*.csv

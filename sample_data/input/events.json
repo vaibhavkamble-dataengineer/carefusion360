@@ -1,0 +1,57 @@
+[
+  {
+    "event_id": "E8001",
+    "member_id": "M1001",
+    "event_category": "CLAIMS",
+    "schema_version": "v2",
+    "event_timestamp": "2025-06-16T10:00:00Z",
+    "payload": {
+      "claim": {
+        "id": "C5002",
+        "amount": 850.0,
+        "diagnosis_codes": [
+          "D101",
+          "D202"
+        ]
+      },
+      "provider": {
+        "id": "PR01"
+      }
+    }
+  },
+  {
+    "event_id": "E8002",
+    "member_id": "M1001",
+    "event_category": "BILLING",
+    "schema_version": "v1",
+    "event_timestamp": "2025-06-20T09:00:00Z",
+    "payload": {
+      "payment_amount": 250.0
+    }
+  },
+  {
+    "event_id": "E8003",
+    "member_id": "M1002",
+    "event_category": "POLICY",
+    "schema_version": "v2",
+    "event_timestamp": "2025-06-22T08:00:00Z",
+    "payload": {
+      "policy": {
+        "id": "P1002"
+      }
+    }
+  },
+  {
+    "event_id": "E8004",
+    "member_id": "M1003",
+    "event_category": "MEMBER",
+    "schema_version": "v2",
+    "event_timestamp": "2025-06-25T12:00:00Z",
+    "payload": {
+      "profile": {
+        "first_name": "Chloe",
+        "last_name": "Singh"
+      }
+    }
+  }
+]

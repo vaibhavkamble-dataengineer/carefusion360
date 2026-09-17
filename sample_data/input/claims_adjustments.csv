@@ -1,0 +1,3 @@
+adjustment_id,claim_id,member_id,original_claim_amount,adjustment_amount,adjusted_final_amount,adjustment_date
+A9001,C5001,M1001,1200.50,100.00,1300.50,2025-02-15
+A9002,C5003,M1002,4500.00,-250.00,4250.00,2025-04-25
