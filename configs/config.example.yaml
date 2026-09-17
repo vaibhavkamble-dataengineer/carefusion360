@@ -1,0 +1,13 @@
+# Example configuration shape. Do not put credentials in this file.
+aws:
+  region: ap-south-1
+  data_bucket: carefusion360-data-lake
+  code_bucket: carefusion360-pipeline-code
+
+snowflake:
+  database: CARE_FUSION_DB
+  schema: RAW
+  credential_source: aws_secrets_manager
+
+api:
+  events_endpoint: https://carefusion-webapi-simulator.onrender.com/events

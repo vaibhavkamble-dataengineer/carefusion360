@@ -1,0 +1,4 @@
+# Reference dependency set for Airflow/MWAA development.
+# For managed MWAA, use the exact versions supported by the target environment.
+apache-airflow>=2.11,<3
+apache-airflow-providers-amazon==9.36.0
