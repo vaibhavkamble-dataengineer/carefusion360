@@ -172,7 +172,7 @@ The repository can be syntax-checked without connecting to AWS:
 python -m pytest -q
 ```
 
-The CI workflow performs Python syntax compilation so accidental syntax errors are caught before changes are merged.
+Local validation uses Python syntax compilation to catch accidental syntax errors before committing changes.
 
 ## Cloud deployment concept
 
