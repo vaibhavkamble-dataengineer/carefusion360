@@ -25,7 +25,7 @@ spark = (
 
 spark.sparkContext.setLogLevel("ERROR")
 
-print("🚀 Job2 Started")
+print("Job2 Started")
 
 # ============================================================
 # 2. FETCH SNOWFLAKE CREDENTIALS (SECURE CLI)
@@ -53,15 +53,15 @@ try:
 
     secret = json.loads(secret_dict["SecretString"])
 
-    print("✅ Secret fetched successfully")
+    print("Secret fetched successfully")
 
 except subprocess.CalledProcessError as e:
-    print("❌ AWS CLI failed:")
+    print("AWS CLI failed:")
     print(e.stderr)
     raise
 
 except Exception as e:
-    print("❌ Secret parsing failed:", str(e))
+    print("Secret parsing failed:", str(e))
     raise
 
 # ============================================================
@@ -78,7 +78,7 @@ sfOptions = {
     "tempDir": "s3://carefusion360-data-lake/tmp/snowflake/"
 }
 
-print("✅ Snowflake config ready")
+print("Snowflake config ready")
 
 # ============================================================
 # 4. S3 PATHS
@@ -98,7 +98,7 @@ bad_adjustments_path = f"{quarantine_base}/bad_adjustments"
 # 5. READ DATA FROM SNOWFLAKE
 # ============================================================
 
-print("📥 Reading Snowflake tables...")
+print("Reading Snowflake tables...")
 
 members_df = spark.read.format("snowflake") \
     .options(**sfOptions) \
@@ -125,7 +125,7 @@ violations_df = spark.read.format("snowflake") \
     .option("dbtable", "CARE_FUSION_DB.RAW.VIOLATIONS") \
     .load()
 
-print("✅ Snowflake data loaded")
+print("Snowflake data loaded")
 
 # ============================================================
 # 6. CLAIM VALIDATION
@@ -152,7 +152,7 @@ bad_claims = claims_df.join(
 
 bad_claims.write.mode("overwrite").parquet(bad_claims_path)
 
-print("✅ Claim validation done")
+print("Claim validation done")
 
 # ============================================================
 # 7. ADJUSTMENT VALIDATION
@@ -178,7 +178,7 @@ bad_adjust = adjust_df.join(
 
 bad_adjust.write.mode("overwrite").parquet(bad_adjustments_path)
 
-print("✅ Adjustment validation done")
+print("Adjustment validation done")
 
 # ============================================================
 # 8. BUILD CLAIM FACT
@@ -234,6 +234,6 @@ revenue_clean.write.mode("overwrite").parquet(revenue_output)
 
 violations_clean.write.mode("overwrite").parquet(violations_output)
 
-print("✅ Job2 Completed Successfully")
+print("Job2 Completed Successfully")
 
 spark.stop()
