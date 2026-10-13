@@ -25,7 +25,7 @@ spark = (
 
 spark.sparkContext.setLogLevel("ERROR")
 
-print("🚀 Job3 Started")
+print("Job3 Started")
 
 # ============================================================
 # 2. API INGESTION
@@ -58,7 +58,7 @@ json_rdd = api_rdd.map(fetch_events)
 
 raw_df = spark.read.json(json_rdd)
 
-print("✅ API Data Loaded")
+print("API Data Loaded")
 
 # ============================================================
 # 3. VALIDATION
@@ -222,6 +222,6 @@ billing_bad.write.mode("overwrite").parquet(f"{quarantine_path}/billing_bad")
 policy_bad.write.mode("overwrite").parquet(f"{quarantine_path}/policy_bad")
 member_bad.write.mode("overwrite").parquet(f"{quarantine_path}/member_bad")
 
-print("✅ Job3 Completed Successfully")
+print("Job3 Completed Successfully")
 
 spark.stop()
