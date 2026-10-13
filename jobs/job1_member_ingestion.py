@@ -23,7 +23,7 @@ spark = (
 
 spark.sparkContext.setLogLevel("ERROR")
 
-print("🚀 Job1 Started")
+print("Job1 Started")
 
 # ============================================================
 # 2. S3 PATHS
@@ -169,6 +169,6 @@ final_df.repartition(8).write \
     .partitionBy("processing_date", "active_flag") \
     .parquet(output_path)
 
-print("✅ Job1 Completed Successfully")
+print("Job1 Completed Successfully")
 
 spark.stop()
