@@ -23,7 +23,7 @@ spark = (
 )
 
 spark.sparkContext.setLogLevel("ERROR")
-print("✅ Spark Session Started")
+print("Spark Session Started")
 
 # ============================================================
 # 2. FETCH SNOWFLAKE CREDENTIALS (SECURE CLI)
@@ -48,7 +48,7 @@ try:
     secret = json.loads(secret_dict["SecretString"])
 
 except Exception as e:
-    print(f"❌ Secret fetch failed: {str(e)}")
+    print(f"Secret fetch failed: {str(e)}")
     raise
 
 # ============================================================
@@ -206,7 +206,7 @@ final_df = member_360.select(
     "risk_tier", "churn_flag", "processing_timestamp"
 )
 
-print("📊 Records to write:", final_df.count())
+print("Records to write:", final_df.count())
 
 # ============================================================
 # 11. WRITE TO S3
@@ -217,7 +217,7 @@ final_df.repartition(8, "state") \
     .partitionBy("state") \
     .parquet(OUTPUT_PATH)
 
-print("✅ Written to S3")
+print("Written to S3")
 
 # ============================================================
 # 12. WRITE TO SNOWFLAKE
@@ -230,6 +230,6 @@ final_df.write \
     .mode("append") \
     .save()
 
-print("✅ Written to Snowflake")
+print("Written to Snowflake")
 
 spark.stop()
